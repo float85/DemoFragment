@@ -1,33 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:id="@+id/fragmentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/vMenu" />
+
     <LinearLayout
+        android:id="@+id/vMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnFrag01"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnFragment1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Fragment 01" />
 
         <Button
-            android:id="@+id/btnFrag02"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnFragment2"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Fragment 02" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="Fragment 01" />
+
+        <Button
+            android:id="@+id/btnFragment3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="Fragment 01" />
     </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-
-</LinearLayout>
+</RelativeLayout>
